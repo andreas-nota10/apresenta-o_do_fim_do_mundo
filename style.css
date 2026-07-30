@@ -1,76 +1,84 @@
-/* ==========================
-   CONFIGURAÇÕES GERAIS
-========================== */
+/* ========================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ========================= */
 
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
-    background: linear-gradient(135deg,#d9d9d9,#bfbfbf);
-    min-height: 100vh;
+    background:linear-gradient(135deg,#d9d9d9,#bcbcbc);
+    min-height:100vh;
 }
 
-/* ==========================
-   CABEÇALHO
-========================== */
+/* ========================= */
+/* CABEÇALHO */
+/* ========================= */
 
 header{
-    background:#8f8f8f;
+    background:#8d8d8d;
     box-shadow:0 4px 10px rgba(0,0,0,.3);
 }
 
 header h1{
     text-align:center;
     padding:25px;
+    font-size:40px;
     color:#222;
-    font-size:38px;
 }
 
-/* ==========================
-   MENU
-========================== */
+/* ========================= */
+/* MENU */
+/* ========================= */
 
 nav{
+
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     background:#4338ca;
+
 }
 
 nav button{
 
-    background:transparent;
-    color:white;
+    background:none;
+
     border:none;
 
-    padding:15px 28px;
+    color:white;
+
+    padding:18px 28px;
 
     cursor:pointer;
 
     font-size:16px;
 
     transition:.3s;
+
 }
 
 nav button:hover{
 
-    background:#6557ff;
+    background:#5f53ff;
 
 }
 
 nav button.ativo{
 
-    background:#281f88;
+    background:#2d2488;
 
 }
 
-/* ==========================
-   ÁREA DAS PÁGINAS
-========================== */
+/* ========================= */
+/* ÁREA PRINCIPAL */
+/* ========================= */
 
 main{
 
@@ -80,17 +88,21 @@ main{
 
 }
 
-/* Todas ficam escondidas */
+/* ========================= */
+/* PÁGINAS */
+/* ========================= */
 
 .pagina{
 
     display:none;
 
-    animation: aparecer .5s;
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    animation:aparecer .4s;
 
 }
-
-/* Apenas a primeira aparece */
 
 #recursos{
 
@@ -98,31 +110,21 @@ main{
 
 }
 
-/* ==========================
-   GRID
-========================== */
-
-.pagina{
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:50px;
-
-}
-
-/* ==========================
-   CARDS
-========================== */
+/* ========================= */
+/* CARDS */
+/* ========================= */
 
 .card{
 
-    background:linear-gradient(135deg,#5c48d8,#39248d);
+    background:linear-gradient(135deg,#5b4ae0,#332080);
+
+    border-radius:20px;
 
     color:white;
 
-    height:220px;
+    padding:30px;
 
-    border-radius:18px;
+    min-height:240px;
 
     display:flex;
 
@@ -134,11 +136,9 @@ main{
 
     text-align:center;
 
-    box-shadow:0 10px 20px rgba(0,0,0,.35);
+    box-shadow:0 12px 20px rgba(0,0,0,.35);
 
     transition:.3s;
-
-    padding:20px;
 
 }
 
@@ -146,41 +146,47 @@ main{
 
     transform:translateY(-8px);
 
-    box-shadow:0 20px 30px rgba(0,0,0,.45);
+    box-shadow:0 18px 30px rgba(0,0,0,.45);
 
 }
-
-/* ==========================
-   TÍTULOS DOS CARDS
-========================== */
 
 .card h2{
 
-    font-size:26px;
+    font-size:28px;
 
-    margin-bottom:20px;
+    margin-bottom:15px;
 
 }
-
-/* ==========================
-   TIMER
-========================== */
 
 .card p{
 
-    font-size:22px;
+    color:#f5f5f5;
 
-    font-weight:bold;
+    margin-bottom:18px;
 
-    line-height:1.6;
-
-    color:#ffe66d;
+    line-height:1.5;
 
 }
 
-/* ==========================
-   ANIMAÇÃO
-========================== */
+/* ========================= */
+/* TIMER */
+/* ========================= */
+
+.timer{
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    color:#ffe66d;
+
+    line-height:1.5;
+
+}
+
+/* ========================= */
+/* ANIMAÇÃO */
+/* ========================= */
 
 @keyframes aparecer{
 
@@ -202,9 +208,9 @@ main{
 
 }
 
-/* ==========================
-   RESPONSIVIDADE
-========================== */
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
 
 @media(max-width:900px){
 
@@ -232,26 +238,44 @@ main{
 
     }
 
+}
+
+@media(max-width:600px){
+
     .card{
 
-        height:200px;
+        padding:20px;
+
+        min-height:200px;
+
+    }
+
+    .card h2{
+
+        font-size:22px;
+
+    }
+
+    .timer{
+
+        font-size:20px;
 
     }
 
 }
 
-/* ==========================
-   RODAPÉ (caso queira usar)
-========================== */
+/* ========================= */
+/* RODAPÉ */
+/* ========================= */
 
 footer{
 
-    text-align:center;
+    margin-top:40px;
 
     padding:20px;
 
-    color:#444;
+    text-align:center;
 
-    margin-top:40px;
+    color:#555;
 
 }
