@@ -1,50 +1,172 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tempo para o fim do mundo</title>
+    <title>Tempo para o Fim do Mundo</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Tempo para o fim do mundo</h1>
+    <header>
 
-    <nav>
-        <a href="#">Recursos Naturais</a>
-        <a href="#">Ciência e Tecnologia</a>
-        <a href="#">Meio Ambiente</a>
-        <a href="#">População</a>
-        <a href="#">Economia</a>
-    </nav>
-</header>
+        <h1>Tempo para o Fim do Mundo</h1>
 
-<main class="container">
+        <nav>
 
-    <div class="card">
-        <h2>Petróleo</h2>
-        <div id="petroleo" class="timer"></div>
-    </div>
+            <button onclick="mostrarPagina('recursos')">Recursos Naturais</button>
 
-    <div class="card">
-        <h2>Gás Natural</h2>
-        <div id="gas" class="timer"></div>
-    </div>
+            <button onclick="mostrarPagina('ciencia')">Ciência e Tecnologia</button>
 
-    <div class="card">
-        <h2>Carvão Mineral</h2>
-        <div id="carvao" class="timer"></div>
-    </div>
+            <button onclick="mostrarPagina('meioambiente')">Meio Ambiente</button>
 
-    <div class="card">
-        <h2>Água Potável</h2>
-        <div id="agua" class="timer"></div>
-    </div>
+            <button onclick="mostrarPagina('populacao')">População</button>
 
-</main>
+            <button onclick="mostrarPagina('economia')">Economia</button>
 
-<script src="script.js"></script>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- RECURSOS NATURAIS -->
+
+        <section id="recursos" class="pagina">
+
+            <div class="card">
+                <h2>⛽ Petróleo</h2>
+                <p id="petroleo"></p>
+            </div>
+
+            <div class="card">
+                <h2>🔥 Gás Natural</h2>
+                <p id="gas"></p>
+            </div>
+
+            <div class="card">
+                <h2>🪨 Carvão Mineral</h2>
+                <p id="carvao"></p>
+            </div>
+
+            <div class="card">
+                <h2>💧 Água Potável</h2>
+                <p id="agua"></p>
+            </div>
+
+        </section>
+
+        <!-- CIÊNCIA E TECNOLOGIA -->
+
+        <section id="ciencia" class="pagina">
+
+            <div class="card">
+                <h2>🌕 Missão Tripulada à Lua</h2>
+                <p id="lua"></p>
+            </div>
+
+            <div class="card">
+                <h2>🔴 Missão para Marte</h2>
+                <p id="marte"></p>
+            </div>
+
+            <div class="card">
+                <h2>🚀 Próxima Missão Espacial</h2>
+                <p id="espacial"></p>
+            </div>
+
+            <div class="card">
+                <h2>🔬 Grande Projeto Científico</h2>
+                <p id="cientifico"></p>
+            </div>
+
+        </section>
+
+        <!-- MEIO AMBIENTE -->
+
+        <section id="meioambiente" class="pagina">
+
+            <div class="card">
+                <h2>🌳 Restauração de Florestas</h2>
+                <p id="florestas"></p>
+            </div>
+
+            <div class="card">
+                <h2>🌎 Neutralidade de Carbono</h2>
+                <p id="carbono"></p>
+            </div>
+
+            <div class="card">
+                <h2>🐢 Proteção da Biodiversidade</h2>
+                <p id="biodiversidade"></p>
+            </div>
+
+            <div class="card">
+                <h2>♻️ Redução da Poluição Plástica</h2>
+                <p id="plastico"></p>
+            </div>
+
+        </section>
+
+        <!-- POPULAÇÃO -->
+
+        <section id="populacao" class="pagina">
+
+            <div class="card">
+                <h2>🌍 População Mundial - 9 Bilhões</h2>
+                <p id="novebilhoes"></p>
+            </div>
+
+            <div class="card">
+                <h2>🏙 Crescimento da População Urbana</h2>
+                <p id="urbana"></p>
+            </div>
+
+            <div class="card">
+                <h2>👴 População Idosa</h2>
+                <p id="idosos"></p>
+            </div>
+
+            <div class="card">
+                <h2>👶 Crescimento Populacional</h2>
+                <p id="crescimento"></p>
+            </div>
+
+        </section>
+
+        <!-- ECONOMIA -->
+
+        <section id="economia" class="pagina">
+
+            <div class="card">
+                <h2>💰 Crescimento do PIB Mundial</h2>
+                <p id="pib"></p>
+            </div>
+
+            <div class="card">
+                <h2>📈 Redução da Pobreza Extrema</h2>
+                <p id="pobreza"></p>
+            </div>
+
+            <div class="card">
+                <h2>🌐 Comércio Mundial</h2>
+                <p id="comercio"></p>
+            </div>
+
+            <div class="card">
+                <h2>💳 Inclusão Financeira Global</h2>
+                <p id="financeira"></p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
