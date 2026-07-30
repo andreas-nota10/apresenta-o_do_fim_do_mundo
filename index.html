@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -11,162 +11,88 @@
 
 <body>
 
-    <header>
+<header>
 
-        <h1>Tempo para o Fim do Mundo</h1>
+    <h1>⏳ Tempo para o Fim do Mundo</h1>
 
-        <nav>
+    <nav>
 
-            <button onclick="mostrarPagina('recursos')">Recursos Naturais</button>
+        <button onclick="mostrarPagina('recursos', this)">Recursos Naturais</button>
 
-            <button onclick="mostrarPagina('ciencia')">Ciência e Tecnologia</button>
+        <button onclick="mostrarPagina('ciencia', this)">Ciência e Tecnologia</button>
 
-            <button onclick="mostrarPagina('meioambiente')">Meio Ambiente</button>
+        <button onclick="mostrarPagina('meioambiente', this)">Meio Ambiente</button>
 
-            <button onclick="mostrarPagina('populacao')">População</button>
+        <button onclick="mostrarPagina('populacao', this)">População</button>
 
-            <button onclick="mostrarPagina('economia')">Economia</button>
+        <button onclick="mostrarPagina('economia', this)">Economia</button>
 
-        </nav>
+    </nav>
 
-    </header>
+</header>
 
-    <main>
+<main>
 
-        <!-- RECURSOS NATURAIS -->
+<!-- ========================================= -->
+<!-- RECURSOS NATURAIS -->
+<!-- ========================================= -->
 
-        <section id="recursos" class="pagina">
+<section id="recursos" class="pagina">
 
-            <div class="card">
-                <h2>⛽ Petróleo</h2>
-                <p id="petroleo"></p>
-            </div>
+    <div class="card">
+        <h2>⛽ Petróleo</h2>
+        <p>Estimativa para o esgotamento das reservas mundiais.</p>
+        <div class="timer" id="petroleo"></div>
+    </div>
 
-            <div class="card">
-                <h2>🔥 Gás Natural</h2>
-                <p id="gas"></p>
-            </div>
+    <div class="card">
+        <h2>🔥 Gás Natural</h2>
+        <p>Tempo restante estimado das reservas conhecidas.</p>
+        <div class="timer" id="gas"></div>
+    </div>
 
-            <div class="card">
-                <h2>🪨 Carvão Mineral</h2>
-                <p id="carvao"></p>
-            </div>
+    <div class="card">
+        <h2>🪨 Carvão Mineral</h2>
+        <p>Estimativa baseada no consumo global.</p>
+        <div class="timer" id="carvao"></div>
+    </div>
 
-            <div class="card">
-                <h2>💧 Água Potável</h2>
-                <p id="agua"></p>
-            </div>
+    <div class="card">
+        <h2>💧 Água Potável</h2>
+        <p>Estimativa considerando consumo e disponibilidade.</p>
+        <div class="timer" id="agua"></div>
+    </div>
 
-        </section>
+</section>
 
-        <!-- CIÊNCIA E TECNOLOGIA -->
+<!-- ========================================= -->
+<!-- CIÊNCIA E TECNOLOGIA -->
+<!-- ========================================= -->
 
-        <section id="ciencia" class="pagina">
+<section id="ciencia" class="pagina">
 
-            <div class="card">
-                <h2>🌕 Missão Tripulada à Lua</h2>
-                <p id="lua"></p>
-            </div>
+    <div class="card">
+        <h2>🌕 Missão Tripulada à Lua</h2>
+        <p>Contagem até a próxima missão prevista.</p>
+        <div class="timer" id="lua"></div>
+    </div>
 
-            <div class="card">
-                <h2>🔴 Missão para Marte</h2>
-                <p id="marte"></p>
-            </div>
+    <div class="card">
+        <h2>🔴 Missão para Marte</h2>
+        <p>Estimativa para a primeira missão tripulada.</p>
+        <div class="timer" id="marte"></div>
+    </div>
 
-            <div class="card">
-                <h2>🚀 Próxima Missão Espacial</h2>
-                <p id="espacial"></p>
-            </div>
+    <div class="card">
+        <h2>🚀 Próxima Missão Espacial</h2>
+        <p>Contagem até um lançamento programado.</p>
+        <div class="timer" id="espacial"></div>
+    </div>
 
-            <div class="card">
-                <h2>🔬 Grande Projeto Científico</h2>
-                <p id="cientifico"></p>
-            </div>
+    <div class="card">
+        <h2>🔬 Grande Projeto Científico</h2>
+        <p>Operação prevista de um grande experimento científico.</p>
+        <div class="timer" id="cientifico"></div>
+    </div>
 
-        </section>
-
-        <!-- MEIO AMBIENTE -->
-
-        <section id="meioambiente" class="pagina">
-
-            <div class="card">
-                <h2>🌳 Restauração de Florestas</h2>
-                <p id="florestas"></p>
-            </div>
-
-            <div class="card">
-                <h2>🌎 Neutralidade de Carbono</h2>
-                <p id="carbono"></p>
-            </div>
-
-            <div class="card">
-                <h2>🐢 Proteção da Biodiversidade</h2>
-                <p id="biodiversidade"></p>
-            </div>
-
-            <div class="card">
-                <h2>♻️ Redução da Poluição Plástica</h2>
-                <p id="plastico"></p>
-            </div>
-
-        </section>
-
-        <!-- POPULAÇÃO -->
-
-        <section id="populacao" class="pagina">
-
-            <div class="card">
-                <h2>🌍 População Mundial - 9 Bilhões</h2>
-                <p id="novebilhoes"></p>
-            </div>
-
-            <div class="card">
-                <h2>🏙 Crescimento da População Urbana</h2>
-                <p id="urbana"></p>
-            </div>
-
-            <div class="card">
-                <h2>👴 População Idosa</h2>
-                <p id="idosos"></p>
-            </div>
-
-            <div class="card">
-                <h2>👶 Crescimento Populacional</h2>
-                <p id="crescimento"></p>
-            </div>
-
-        </section>
-
-        <!-- ECONOMIA -->
-
-        <section id="economia" class="pagina">
-
-            <div class="card">
-                <h2>💰 Crescimento do PIB Mundial</h2>
-                <p id="pib"></p>
-            </div>
-
-            <div class="card">
-                <h2>📈 Redução da Pobreza Extrema</h2>
-                <p id="pobreza"></p>
-            </div>
-
-            <div class="card">
-                <h2>🌐 Comércio Mundial</h2>
-                <p id="comercio"></p>
-            </div>
-
-            <div class="card">
-                <h2>💳 Inclusão Financeira Global</h2>
-                <p id="financeira"></p>
-            </div>
-
-        </section>
-
-    </main>
-
-    <script src="script.js"></script>
-
-</body>
-
-</html>
+</section>
