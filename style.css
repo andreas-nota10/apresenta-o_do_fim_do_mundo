@@ -1,66 +1,257 @@
+/* ==========================
+   CONFIGURAÇÕES GERAIS
+========================== */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
-    background:#d9d9d9;
+    background: linear-gradient(135deg,#d9d9d9,#bfbfbf);
+    min-height: 100vh;
 }
 
+/* ==========================
+   CABEÇALHO
+========================== */
+
 header{
-    background:#a9a9a9;
-    text-align:center;
+    background:#8f8f8f;
+    box-shadow:0 4px 10px rgba(0,0,0,.3);
 }
 
 header h1{
-    padding:20px;
+    text-align:center;
+    padding:25px;
+    color:#222;
+    font-size:38px;
 }
+
+/* ==========================
+   MENU
+========================== */
 
 nav{
     display:flex;
-    justify-content:space-around;
-    background:#4d43d6;
-    padding:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+    background:#4338ca;
 }
 
-nav a{
+nav button{
+
+    background:transparent;
     color:white;
-    text-decoration:none;
-    font-size:15px;
+    border:none;
+
+    padding:15px 28px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
 }
 
-.container{
-    width:80%;
+nav button:hover{
+
+    background:#6557ff;
+
+}
+
+nav button.ativo{
+
+    background:#281f88;
+
+}
+
+/* ==========================
+   ÁREA DAS PÁGINAS
+========================== */
+
+main{
+
+    width:90%;
+
     margin:40px auto;
 
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:50px;
 }
+
+/* Todas ficam escondidas */
+
+.pagina{
+
+    display:none;
+
+    animation: aparecer .5s;
+
+}
+
+/* Apenas a primeira aparece */
+
+#recursos{
+
+    display:grid;
+
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.pagina{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+}
+
+/* ==========================
+   CARDS
+========================== */
 
 .card{
-    background:#4f3ba7;
+
+    background:linear-gradient(135deg,#5c48d8,#39248d);
+
     color:white;
-    height:180px;
-    border-radius:10px;
+
+    height:220px;
+
+    border-radius:18px;
 
     display:flex;
+
     flex-direction:column;
+
     justify-content:center;
+
     align-items:center;
 
-    box-shadow:0 0 10px rgba(0,0,0,.3);
+    text-align:center;
+
+    box-shadow:0 10px 20px rgba(0,0,0,.35);
+
+    transition:.3s;
+
+    padding:20px;
+
 }
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 30px rgba(0,0,0,.45);
+
+}
+
+/* ==========================
+   TÍTULOS DOS CARDS
+========================== */
 
 .card h2{
-    margin-bottom:15px;
+
+    font-size:26px;
+
+    margin-bottom:20px;
+
 }
 
-.timer{
-    font-size:20px;
-    text-align:center;
+/* ==========================
+   TIMER
+========================== */
+
+.card p{
+
+    font-size:22px;
+
     font-weight:bold;
-    line-height:1.5;
+
+    line-height:1.6;
+
+    color:#ffe66d;
+
+}
+
+/* ==========================
+   ANIMAÇÃO
+========================== */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media(max-width:900px){
+
+    .pagina{
+
+        grid-template-columns:1fr;
+
+    }
+
+    nav{
+
+        flex-direction:column;
+
+    }
+
+    nav button{
+
+        width:100%;
+
+    }
+
+    header h1{
+
+        font-size:30px;
+
+    }
+
+    .card{
+
+        height:200px;
+
+    }
+
+}
+
+/* ==========================
+   RODAPÉ (caso queira usar)
+========================== */
+
+footer{
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#444;
+
+    margin-top:40px;
+
 }
